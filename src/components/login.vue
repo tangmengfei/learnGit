@@ -4,6 +4,13 @@
       <div class="avatar_box">
         <img src="../assets/logo.png">
       </div>
+      <div>
+        <el-form label-width="80px" class="login_form" :model="loginForm">
+          <el-form-item label="账户:">
+            <el-input v-model="loginForm.username"/>
+          </el-form-item>
+        </el-form>
+      </div>
 <!--      <el-form ref="loginForm" :model="loginForm" label-width="90px" class="login-form">-->
 <!--        <h3>疯狂哲学后台管理系统</h3>-->
 <!--        <el-form-item label="账户:" prop="username">-->
@@ -37,7 +44,7 @@ export default {
     justify-content : center;
     align-items: center;
     height: 100%;
-    background-image: url("../assets/image/login-background.jpg");
+    background-image: url("../assets/image/login/login_nanjing.jpg");
     background-size: 100% 100%;
   }
   .login_box{
@@ -52,9 +59,18 @@ export default {
     .avatar_box{
       height: 130px;
       width: 130px;
+      border: 1px solid #eeeeee;
+      border-radius: 50%;
+      padding: 10px;
+      background-color: #eeeeee;
+      position: absolute;
+      left:50%;
+      top: -30%;
+      transform: translate(-50%);
       img{
         height: 100%;
         width: 100%;
+        border-radius: 50%;
       }
     }
   }
@@ -62,6 +78,8 @@ export default {
     border-radius: 6px;
     background: #ffffff;
     width: 400px;
-    padding: 25px 25px 5px 25px;
+    /*padding: 25px 25px 5px 25px;*/
+    position: absolute;
+    top: 50%;
   }
 </style>
