@@ -5,21 +5,12 @@
         <img src="../assets/logo.png">
       </div>
       <div>
-        <el-form label-width="80px" class="login_form" :model="loginForm">
+        <el-form ref="loginForm" :model="loginForm" label-width="80px" class="login_form">
           <el-form-item label="账户:">
             <el-input v-model="loginForm.username"/>
           </el-form-item>
         </el-form>
       </div>
-<!--      <el-form ref="loginForm" :model="loginForm" label-width="90px" class="login-form">-->
-<!--        <h3>疯狂哲学后台管理系统</h3>-->
-<!--        <el-form-item label="账户:" prop="username">-->
-<!--          <el-input v-model="loginForm.username" placeholder="账户"></el-input>-->
-<!--        </el-form-item>-->
-<!--        <el-form-item label="密码:" prop="password">-->
-<!--          <el-input v-model="loginForm.password" placeholder="密码"></el-input>-->
-<!--        </el-form-item>-->
-<!--      </el-form>-->
     </div>
   </div>
 </template>
@@ -62,15 +53,16 @@ export default {
       border: 1px solid #eeeeee;
       border-radius: 50%;
       padding: 10px;
-      background-color: #eeeeee;
+      box-shadow: 0 0 10px #dddddd;
       position: absolute;
-      left:50%;
-      top: -30%;
-      transform: translate(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
       img{
         height: 100%;
         width: 100%;
         border-radius: 50%;
+        background-color: #eeeeee;
       }
     }
   }
